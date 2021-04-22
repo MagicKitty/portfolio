@@ -18,6 +18,8 @@ html {
 
 body {
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 [hidden] {
@@ -211,4 +213,12 @@ section {
 [type='radio'] {
     box-sizing: border-box;
     padding: 0;
+}
+
+footer {
+    margin-top: auto;
+
+    padding: 3em;
+    color: white;
+    background: #333;
 }

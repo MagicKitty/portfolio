@@ -10,19 +10,13 @@ const data = [
 ];
 
 export default function MyResponsiveRadar() {
-  const margins =
-    window.innerWidth < 700
-      ? { top: 5, right: 5, bottom: 5, left: 5 }
-      : { top: 15, right: 70, bottom: 50, left: 70 };
-  const legendDirection = window.innerWidth < 700 ? 'column' : 'row';
-
   return (
     <ResponsiveRadar
       data={data}
       keys={['before', 'now', 'after']}
       indexBy="language"
       maxValue="auto"
-      margin={margins}
+      margin={{ top: 15, right: 40, bottom: 50, left: 40 }}
       curve="linearClosed"
       borderWidth={2}
       borderColor={{ from: 'color' }}
@@ -45,7 +39,7 @@ export default function MyResponsiveRadar() {
       legends={[
         {
           anchor: 'bottom',
-          direction: legendDirection,
+          direction: 'row',
           translateX: -50,
           translateY: -30,
           itemWidth: 70,

@@ -7,6 +7,7 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 library.add(fab, far);
 
 interface Props {
+  type: string;
   logo?: JSX.Element;
   title?: string;
   radar?: JSX.Element;
@@ -14,12 +15,27 @@ interface Props {
 }
 
 export default function Card(props: Props) {
+  let classes = '';
+  switch (props.type) {
+    case 'radar':
+      classes = 'card-radar';
+      break;
+    case 'intro':
+      classes = 'card-medium animation';
+      break;
+    case 'normal':
+      classes = 'card-normal';
+      break;
+    default:
+      break;
+  }
+
   return (
-    <div className={props.radar ? 'card-radar' : 'card-medium animation'}>
+    <div className={classes}>
       {props.logo ? <div className="logo">{props.logo}</div> : ''}
       {props.title ? <h2>{props.title}</h2> : ''}
       {props.radar ? <div className="radar">{props.radar}</div> : ''}
-      {props.content ? (
+      {props.type === 'intro' ? (
         <div className="content">
           <p>{props.content}</p>
           <div className="links">
@@ -35,6 +51,13 @@ export default function Card(props: Props) {
             </a>
             <hr className="dashed-border" />
           </div>
+        </div>
+      ) : (
+        ''
+      )}
+      {props.type === 'normal' ? (
+        <div className="content">
+          <p>{props.content}</p>
         </div>
       ) : (
         ''
