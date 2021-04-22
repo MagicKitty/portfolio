@@ -25,8 +25,6 @@ export default function Sections() {
               <img
                 alt="nicolas blin logo"
                 src="./logo_size_invert.jpg"
-                height="100px"
-                width="100px"
               />
             }
             content={
@@ -68,7 +66,7 @@ export default function Sections() {
             .stroke('rgba(0,0,0,0.13)')
             .background('#98ddca')}
         >
-          <Card radar={<RadarSkills />} title={<h2>Radar de compétences</h2>} />
+          <Card radar={<RadarSkills />} title={'Radar de compétences'} />
         </Background>
       </section>
     </React.Fragment>

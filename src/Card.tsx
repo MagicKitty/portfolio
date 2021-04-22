@@ -8,16 +8,16 @@ library.add(fab, far);
 
 interface Props {
   logo?: JSX.Element;
-  title?: JSX.Element;
+  title?: string;
   radar?: JSX.Element;
   content?: JSX.Element;
 }
 
 export default function Card(props: Props) {
   return (
-    <div className={props.radar ? 'card-radar' : 'card-medium'}>
+    <div className={props.radar ? 'card-radar' : 'card-medium animation'}>
       {props.logo ? <div className="logo">{props.logo}</div> : ''}
-      {props.title ? <div>{props.title}</div> : ''}
+      {props.title ? <h2>{props.title}</h2> : ''}
       {props.radar ? <div className="radar">{props.radar}</div> : ''}
       {props.content ? (
         <div className="content">
