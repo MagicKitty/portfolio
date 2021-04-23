@@ -222,3 +222,23 @@ footer {
     color: white;
     background: #333;
 }
+
+a:visited {
+    color: rgb(255, 95, 95);
+}
+
+a:focus:nth-child(1) {
+    color: rgb(72, 72, 255);
+}
+
+a:focus:nth-child(2) {
+    color: violet;
+}
+
+a:focus:nth-child(3) {
+    color: goldenrod;
+}
+
+a:focus:nth-child(4) {
+    color: rgb(80, 212, 212);
+}

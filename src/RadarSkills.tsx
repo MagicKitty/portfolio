@@ -2,18 +2,18 @@ import { ResponsiveRadar } from '@nivo/radar';
 import './RadarSkills.css';
 
 const data = [
-  { language: 'Javascript', before: 10, now: 32, after: 40 },
-  { language: 'BDD', before: 7, now: 15, after: 20 },
-  { language: 'DevOps', before: 10, now: 25, after: 30 },
-  { language: 'Java', before: 15, now: 30, after: 40 },
-  { language: 'TDD', before: 5, now: 17, after: 30 },
+  { language: 'Javascript', maintenant: 32, futur: 40 },
+  { language: 'BDD', maintenant: 15, futur: 20 },
+  { language: 'DevOps', maintenant: 25, futur: 30 },
+  { language: 'Java', maintenant: 30, futur: 40 },
+  { language: 'TDD', maintenant: 17, futur: 30 },
 ];
 
 export default function MyResponsiveRadar() {
   return (
     <ResponsiveRadar
       data={data}
-      keys={['before', 'now', 'after']}
+      keys={['maintenant', 'futur']}
       indexBy="language"
       maxValue="auto"
       margin={{ top: 15, right: 40, bottom: 50, left: 40 }}
@@ -42,7 +42,7 @@ export default function MyResponsiveRadar() {
           direction: 'row',
           translateX: -50,
           translateY: -30,
-          itemWidth: 70,
+          itemWidth: 100,
           itemHeight: 10,
           itemTextColor: '#999',
           symbolSize: 12,

@@ -35,6 +35,8 @@
   height: 70%;
   width: 80%;
   border-radius: 4px;
+
+  overflow: hidden;
 }
 
 .content {
@@ -48,6 +50,10 @@
   margin: 0;
   height: 90%;
   overflow-y: scroll;
+}
+
+.content-normal {
+  padding: 1em;
 }
 
 .logo {
@@ -145,7 +151,8 @@ i {
     width: 40px;
   }
 
-  .card-radar {
+  .card-radar,
+  .card-normal {
     height: 95%;
     width: 95%;
   }
@@ -164,10 +171,22 @@ i {
     height: 40px;
     width: 40px;
   }
+
+  .card-radar,
+  .card-normal {
+    height: 95%;
+    width: 95%;
+  }
 }
 
 @media only screen and (max-width: 300px) and (max-height: 300px) {
   .logo {
     display: none;
+  }
+
+  .card-radar,
+  .card-normal {
+    height: 95%;
+    width: 95%;
   }
 }

@@ -56,7 +56,7 @@ export default function Card(props: Props) {
         ''
       )}
       {props.type === 'normal' ? (
-        <div className="content">
+        <div className="content content-normal">
           <p>{props.content}</p>
         </div>
       ) : (
